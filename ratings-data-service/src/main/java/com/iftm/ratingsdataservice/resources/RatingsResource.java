@@ -14,16 +14,20 @@ import com.iftm.ratingsdataservice.models.UserRating;
 @RequestMapping("/ratingsdata")
 public class RatingsResource {
 
-	@RequestMapping("/{movieId}")
-	public Rating getRating(@PathVariable("movieId") String movieId) {
-		return new Rating(movieId, 4);
-	}
+    @RequestMapping("/{movieId}")
+    public Rating getRating(@PathVariable("movieId") String movieId) {
+        return new Rating(movieId, 9);
+    }
+	
+    @RequestMapping("users/{userId}")
+    public List<Rating> getUserRating(@PathVariable("userId") String userId) {
+    	List<Rating> ratings = Arrays.asList(
+				new Rating("1234",18),
+				new Rating("1541",28)
+			);
+    	UserRating userRating = new UserRating();
+    	userRating.setRatings(ratings);
+    	return ratings;
+    }
 
-	@RequestMapping("users/{userId}")
-	public List<Rating> getUserRating(@PathVariable("userId") String userId) {
-		List<Rating> ratings = Arrays.asList(new Rating("1234", 12), new Rating("1432", 22));
-		UserRating userRating = new UserRating();
-		userRating.setUserRating(ratings);
-		return ratings;
-	}
 }
