@@ -37,3 +37,6 @@ build/
 metadata
 .metadata/
 metadata/
+
+themoviedb.org.key
+api.txt

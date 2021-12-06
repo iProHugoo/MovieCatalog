@@ -4,17 +4,17 @@ public class Movie {
 
 	private String movieId;
 	private String name;
+	private String description;
 
 	// Aqui Indica Como Esta Classe Poderá Ser Acessada
-	public Movie(String movieId, String name) {
-		super();
+	public Movie(String movieId, String name, String description) {
 		this.movieId = movieId;
 		this.name = name;
+		this.description = description;
 	}
 
 	// Indica Como Gerar um Objeto Vazio Dessa Classe Que Depois Será Populado
 	public Movie() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -33,6 +33,14 @@ public class Movie {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

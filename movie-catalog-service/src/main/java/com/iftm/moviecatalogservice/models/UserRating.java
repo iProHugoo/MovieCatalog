@@ -7,15 +7,6 @@ public class UserRating {
 	private String userId;
 	private List<Rating> ratings;
 
-	public UserRating(String userId, List<Rating> ratings) {
-		this.userId = userId;
-		this.ratings = ratings;
-	}
-
-	public UserRating() {
-		super();
-	}
-
 	public String getUserId() {
 		return userId;
 	}

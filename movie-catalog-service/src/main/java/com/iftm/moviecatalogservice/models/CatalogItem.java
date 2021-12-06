@@ -7,7 +7,6 @@ public class CatalogItem {
 	private int rating;
 
 	public CatalogItem() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 	
